@@ -10,6 +10,7 @@
     <table>
       <thead>
         <tr>
+          <th>Id</th>
           <th>Brands</th>
           <th>Model</th>
           <th>Cost</th>
@@ -18,12 +19,19 @@
       <tbody>
         {% for p in products %}
         <tr>
+          <td>{{p.id}}</td>
           <td>{{p.productBrandName}}</td>
           <td>{{p.productBrandModel}}</td>
           <td>{{p.productBrandCost}}</td>
+          <td><button type="button"><a href="/product/update/{{p.id}}" style="text-decoration:none">Update Record</a></button></td>
+          <td><button type="button"><a href="/product/delete/{{p.id}}" style="text-decoration:none">Delete Record</a></button></td>
         </tr>
         {% endfor %}
       </tbody>
     </table>
+    <br><br>
+    <button type="button" name="button">
+     <a href="/product/create" style="text-decoration:none">Add Product</a>
+  </button>
   </body>
 </html>

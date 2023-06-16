@@ -4,5 +4,6 @@ from appOne import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.getProducts)
+    path('', views.getProducts),
+    path('product/update/<int:id>', views.updateProduct)
 ]
